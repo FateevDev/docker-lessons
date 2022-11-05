@@ -12,9 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 app.use('/feedback', express.static('feedback'));
 
-console.log('test_serv222222');
-console.log('99999');
-
 app.get('/', (req, res) => {
   const filePath = path.join(__dirname, 'pages', 'feedback.html');
   res.sendFile(filePath);
@@ -33,9 +30,6 @@ app.post('/create', async (req, res) => {
 
   const tempFilePath = path.join(__dirname, 'temp', adjTitle + '.txt');
   const finalFilePath = path.join(__dirname, 'feedback', adjTitle + '.txt');
-
-  console.log('test_serv2');
-  console.log('test_serv33333');
 
   await fs.writeFile(tempFilePath, content);
   exists(finalFilePath, async (exists) => {
