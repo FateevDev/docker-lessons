@@ -83,8 +83,11 @@ app.delete('/goals/:id', async (req, res) => {
   }
 });
 
+// todo сделать пока без отдельной сети
 mongoose.connect(
-  'mongodb://multi-mongo:27017/course-goals',
+  // 'mongodb://multi-mongo:27017/course-goals',
+    // 'mongodb://localhost:27017/course-goals',
+    'mongodb://host.docker.internal:27017/course-goals',
   {
     useNewUrlParser: true,
     // useUnifiedTopology: true,
