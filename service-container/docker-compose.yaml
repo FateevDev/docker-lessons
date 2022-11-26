@@ -1,0 +1,9 @@
+# doco run --rm -it npm init
+version: "3.8"
+services:
+  npm:
+    build: ./
+    volumes:
+      - ./:/app
+    tty: true
+    stdin_open: true

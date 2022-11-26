@@ -1,0 +1,11 @@
+# doco run --rm -e COMMAND="-p /app/roles/docker-image-sites/tasks/sites.yaml" linter
+version: "3.8"
+services:
+  linter:
+    build: .
+    volumes:
+      - /home/vasiliy/development/ansible-deploy/:/app
+    tty: true
+    stdin_open: true
+#    environment:
+#      COMMAND: "-p /app/roles/docker-image-sites/tasks/sites.yaml"
