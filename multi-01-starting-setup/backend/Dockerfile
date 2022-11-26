@@ -8,6 +8,9 @@ RUN npm install
 
 COPY . .
 
+ENV MONGO_USERNAME=""
+ENV MONGO_PASSWORD=""
+
 EXPOSE 80
 
-CMD ["node", "app.js"]
+CMD ["npm", "start"]
